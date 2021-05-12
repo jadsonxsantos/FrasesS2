@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FrasesS2.Views.EnviarFrase">
+    
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Envie sua frase, vamos adicionar ao app em até 3 dias úteis após a aprovação!"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+            <Entry Text="Qual seu Nome?"></Entry>
+            <Entry Text="Autor da Frase"></Entry>
+            <Editor Text="Digite a Frase"></Editor>
+            <Button Text="Enviar..."></Button>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

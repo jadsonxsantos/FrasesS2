@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FrasesS2.Views.Visualizar" BackgroundColor="White">
+    
+    <StackLayout>
+
+        <StackLayout>
+            <Image x:Name="ImageCategoria" 
+                   HeightRequest="200"  
+                   WidthRequest="200"                      
+                   Aspect="AspectFill"
+                   HorizontalOptions="Fill"                    
+                   VerticalOptions="Fill"/>
+
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Margin="70,0,70,0" VerticalOptions="EndAndExpand">
+
+                <ImageButton x:Name="IBtn_Voltar" Source="ic_back.png" HeightRequest="50" WidthRequest="50"
+                     Aspect="AspectFit" Clicked="VoltarClicked"
+                     BorderWidth="5" BackgroundColor="{StaticResource Primary}"
+                     VerticalOptions="CenterAndExpand"
+                     HorizontalOptions="CenterAndExpand"/>
+
+                <ImageButton x:Name="IBtn_Copiar" Source="ic_copy.png" 
+                     Aspect="AspectFill" HeightRequest="50" WidthRequest="50"
+                     BorderWidth="5" BackgroundColor="{StaticResource Primary}"
+                     VerticalOptions="CenterAndExpand" Clicked="IBtn_Copiar_Clicked"
+                     HorizontalOptions="CenterAndExpand"/>
+
+                <ImageButton x:Name="IBtn_Corrigir" Source="ic_feedback.png" 
+                     Aspect="AspectFit" HeightRequest="50" WidthRequest="50"
+                     BorderWidth="5" BackgroundColor="{StaticResource Primary}"
+                     VerticalOptions="CenterAndExpand" Clicked="IBtn_Corrigir_Clicked"
+                     HorizontalOptions="CenterAndExpand"/>
+
+                <ImageButton x:Name="IBtn_Compartilhar" Source="ic_share.png" 
+                     Aspect="AspectFit" HeightRequest="50" WidthRequest="50"
+                     BorderWidth="5" BackgroundColor="{StaticResource Primary}"
+                     VerticalOptions="CenterAndExpand" Clicked="IBtn_Compartilhar_Clicked"
+                     HorizontalOptions="CenterAndExpand"/>
+
+                <ImageButton x:Name="IBtn_Avancar" Source="ic_next.png" HeightRequest="50" WidthRequest="50"
+                     Aspect="AspectFit" Clicked="AvancarClicked"
+                     BorderWidth="5" BackgroundColor="{StaticResource Primary}"
+                     VerticalOptions="CenterAndExpand"
+                     HorizontalOptions="CenterAndExpand"/>
+            </StackLayout>
+
+            <Label x:Name="TotalFrases"                       
+                   FontSize="15"                   
+                   FontAttributes="Bold"
+                   TextColor="Black"
+                   VerticalOptions="Center"
+                   HorizontalOptions="Center"/>
+
+            <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+                <!--Exibir a Frase-->
+                <Label x:Name="Frase" FontSize="14"
+                       Margin="5,0,5,0" TextColor="Black"                  
+                       HorizontalTextAlignment="Center"/>
+
+            </StackLayout>
+            <!--Exibir o Autor da Frase-->
+            <Label x:Name="Autor" FontSize="14"  
+                       FontAttributes="Bold" TextColor="Black"
+                       HorizontalTextAlignment="Center"/>
+        </StackLayout>
+
+        <!--<controls:AdMobView x:Name="adMobView"
+                            WidthRequest="320" 
+                            HeightRequest="50" 
+                            BackgroundColor="Transparent" 
+                            VerticalOptions="EndAndExpand"/>-->
+
+    </StackLayout>
+</ContentPage>

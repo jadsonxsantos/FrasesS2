@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FrasesS2.Views.Informacao" BackgroundColor="White"
+              Title="Informações">
+    
+    <ContentPage.Content>
+        <StackLayout>
+            <Image Source="ic_Logo.png" HeightRequest="200" WidthRequest="200"></Image>
+            <Label Margin="5,10,5,10" FontSize="15"
+                   Text="Frases S2"
+                   HorizontalTextAlignment="Center" />
+            <Label Margin="5,10,5,10" FontSize="15"
+                   Text="Siga nosso app através dos meios de comunicação abaixo:"
+                   HorizontalTextAlignment="Center" />
+            <Button x:Name="Instagram" Text="Instagram" Clicked="Instagram_Clicked"></Button>
+            <Button x:Name="Telegram" Text="Comunidade Frases S2" Clicked="Telegram_Clicked"></Button>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
