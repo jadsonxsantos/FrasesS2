@@ -8,9 +8,9 @@
         <StackLayout>
             <Image Source="ic_Logo.png" HeightRequest="200" WidthRequest="200"></Image>
             <Label Margin="5,10,5,10" FontSize="15"
-                   Text="Frases S2"
+                   Text="Frases S2" BackgroundColor="Black"
                    HorizontalTextAlignment="Center" />
-            <Label Margin="5,10,5,10" FontSize="15"
+            <Label Margin="5,10,5,10" FontSize="15" BackgroundColor="Black"
                    Text="Siga nosso app através dos meios de comunicação abaixo:"
                    HorizontalTextAlignment="Center" />
             <Button x:Name="Instagram" Text="Instagram" Clicked="Instagram_Clicked"></Button>
