@@ -62,12 +62,11 @@
         </ResourceDictionary>
     </Shell.Resources>
 
-    <Shell.FlyoutHeaderTemplate>
+    <!--<Shell.FlyoutHeaderTemplate>
         <DataTemplate>
             <StackLayout Margin="0,5,0,5" BackgroundColor="{StaticResource Primary}">
                 <Image Source="S2SemFundo.png" WidthRequest="100" HeightRequest="100"></Image>
-                <Label Text="Versão 3.0.17" TextColor="White" HorizontalTextAlignment="Center"></Label>
-
+                <Label Text="Versão 3.0.19" TextColor="White" HorizontalTextAlignment="Center"></Label>
             </StackLayout>
         </DataTemplate>
     </Shell.FlyoutHeaderTemplate>
@@ -94,5 +93,11 @@
 
     <FlyoutItem Title="Configurações" IsEnabled="False" IsVisible="False" Icon="ic_Configuracoes.png">
         <ShellContent Route="AboutPage" ContentTemplate="{DataTemplate local:Doacao}" />
-    </FlyoutItem>
+    </FlyoutItem>-->
+
+    <!--TABBAR INFERIOR -->
+    <TabBar>
+        <ShellContent Route="frases" Title="FRASES" Icon="icon_Frases.png" ContentTemplate="{DataTemplate local:Categoria}" />
+        <ShellContent Route="sobre" Title="SOBRE" Icon="Icon_Sobre.png" ContentTemplate="{DataTemplate local:Informacao}" />
+    </TabBar>
 </Shell>

@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:pancake="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
              x:Class="FrasesS2.Views.Visualizar" BackgroundColor="White">
-    
-    <StackLayout>
 
+    <StackLayout>
         <StackLayout>
             <Image x:Name="ImageCategoria" 
                    HeightRequest="200"  
@@ -56,7 +56,7 @@
             <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
                 <!--Exibir a Frase-->
                 <Label x:Name="Frase" FontSize="14"
-                       Margin="5,0,5,0" TextColor="Black"                  
+                       Margin="5,0,5,0" TextColor="#696969"                  
                        HorizontalTextAlignment="Center"/>
 
             </StackLayout>
@@ -66,6 +66,26 @@
                        HorizontalTextAlignment="Center"/>
         </StackLayout>
 
+        <pancake:PancakeView VerticalOptions="EndAndExpand" BackgroundColor="#88e288"
+                    Margin="30,10,30,10" x:Name="Pc_Tapped"
+                    HorizontalOptions="FillAndExpand"
+                    HeightRequest="50" CornerRadius="25"                   
+                    Padding="20,0">
+            <pancake:PancakeView.GestureRecognizers>
+                <TapGestureRecognizer  />
+            </pancake:PancakeView.GestureRecognizers>
+                <Label TextColor="Black" FontSize="12"
+                       HorizontalTextAlignment="Center"
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span FontAttributes="Bold" Text="💰 FAÇA UMA DOAÇÃO 💰 &#10;"/>
+                        <Span Text="Ajude a Manter o App Sem Anúncios!"/>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+        </pancake:PancakeView>
         <!--<controls:AdMobView x:Name="adMobView"
                             WidthRequest="320" 
                             HeightRequest="50" 

@@ -197,5 +197,10 @@ namespace FrasesS2.Views
             }
             lv.SelectedItem = null;
         }
+
+        private void TapGestureRecognizer_Tapped(object sender, EventArgs e)
+        {
+
+        }
     }
 }

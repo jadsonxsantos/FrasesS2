@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="17" android:versionName="3.0.17" package="com.companyname.FrasesS2" android:installLocation="auto">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="21" android:versionName="3.0.21" package="com.companyname.FrasesS2" android:installLocation="auto">
 	<uses-sdk android:minSdkVersion="21" android:targetSdkVersion="29" />
 	<application android:label="Frases S2" android:theme="@style/MainTheme" android:icon="@drawable/ic_Logo"></application>
 	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />

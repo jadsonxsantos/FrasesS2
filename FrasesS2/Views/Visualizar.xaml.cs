@@ -18,11 +18,13 @@ namespace FrasesS2.Views
         public Visualizar(CategoriaFrase cf)
         {
             InitializeComponent();
+            Shell.SetTabBarIsVisible(this, false); // ocultando a TabBar
             cfdata = new CategoriaFrase();
             cfdata = cf;
             Title = cfdata.Categoria.ToString();
             ExibirFrase(index);
             ImagemDestaque();
+
         }
         protected override void OnAppearing()
         {
@@ -80,11 +82,7 @@ namespace FrasesS2.Views
 
         private async void IBtn_Copiar_Clicked(object sender, EventArgs e)
         {
-            await Clipboard.SetTextAsync(Frase.Text + Environment.NewLine + "(" + Autor.Text + ")" + Environment.NewLine + "ℹ #FrasesS2" +
-                  Environment.NewLine +
-                  Environment.NewLine + " ⚠ BAIXAR FRASES S2 ⚠  " +
-                  Environment.NewLine + "https://linktr.ee/FrasesS2");
-
+            await Clipboard.SetTextAsync(Frase.Text + Environment.NewLine + "(" + Autor.Text + ")" + Environment.NewLine + "ℹ App Frases S2");
             DependencyService.Get<IMessage>().LongAlert("A frase foi copiada.");
         }
 
@@ -93,10 +91,7 @@ namespace FrasesS2.Views
             await Share.RequestAsync(new ShareTextRequest
             {
                 Text = Frase.Text + Environment.NewLine + "(" + Autor.Text + ")",
-                Uri = Environment.NewLine + "ℹ #FrasesS2" +
-                   Environment.NewLine +
-                   Environment.NewLine + " ⚠ BAIXAR FRASES S2 ⚠  " +
-                   Environment.NewLine + "https://linktr.ee/FrasesS2",
+                Uri = Environment.NewLine + "ℹ App Frases S2",
                 Title = "Frases S2"
             });
         }
@@ -132,6 +127,11 @@ namespace FrasesS2.Views
                 }
             }
 
+        }        
+
+        private async void TapGestureRecognizer_Tapped(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new Views.Doacao());
         }
 
         private async void retroceder()

@@ -1,29 +1,30 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="FrasesS2.Views.Categoria"  
-             Title="Frases S2 - Categorias">
+             xmlns:pancake="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+             x:Class="FrasesS2.Views.Categoria" BackgroundColor="White"
+             Title="Frases S2">
 
-    <StackLayout BackgroundColor="White" VerticalOptions="FillAndExpand" HorizontalOptions="Fill">
-        <StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Center">
-            <ContentView Padding="0,0,0,0" VerticalOptions="FillAndExpand">
-                <StackLayout>
+    <StackLayout BackgroundColor="Transparent" VerticalOptions="FillAndExpand" HorizontalOptions="Fill">
+        <StackLayout Orientation="Horizontal" BackgroundColor="Transparent" HorizontalOptions="Center" VerticalOptions="Center">
+            <ContentView Padding="0,0,0,0" BackgroundColor="Transparent" VerticalOptions="FillAndExpand">
+                <StackLayout BackgroundColor="Transparent">
                     <ListView x:Name="Lista_Categorias" RowHeight="100" ItemTapped="Lista_Categorias_ItemTapped" CachingStrategy="RecycleElement">
                         <ListView.ItemTemplate>
                             <DataTemplate>
                                 <ViewCell>
                                     <Image x:Name="ImgSourcse"
-                                               Margin="0,3,0,0"
-                                               Source="{Binding ImageCateg}"
-                                               Aspect="AspectFill"
-                                               HorizontalOptions="FillAndExpand"                    
-                                               VerticalOptions="FillAndExpand">
+                                           Margin="0,3,0,0"
+                                           Source="{Binding ImageCateg}"
+                                           Aspect="AspectFill"
+                                           HorizontalOptions="FillAndExpand"                    
+                                           VerticalOptions="FillAndExpand">
                                     </Image>
                                 </ViewCell>
                             </DataTemplate>
                         </ListView.ItemTemplate>
                     </ListView>
-
+                  
                 </StackLayout>
             </ContentView>
         </StackLayout>
