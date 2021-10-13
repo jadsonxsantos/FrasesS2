@@ -8,9 +8,8 @@
         <StackLayout>
             <!--Icone do aplicativo-->
             <Image Source="ic_Logo.png" HeightRequest="200" WidthRequest="200"></Image>
-
             <!--BOtão com a Info do App e link externo-->
-            <Button x:Name="InfoApp" Text="FRASES S2 3.0.21 " Clicked="InfoApp_Clicked"></Button>
+            <Button x:Name="InfoApp" Text="FRASES S2 " Clicked="InfoApp_Clicked"></Button>
             <!--Botão com link para telegram-->
             <!-- <Button x:Name="Telegram" BackgroundColor="#247773" Text="Telegram" Clicked="Telegram_Clicked"></Button>-->
             <!--Texto para seção doaçaoes-->
