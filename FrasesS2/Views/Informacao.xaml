@@ -8,7 +8,7 @@
         <StackLayout>
             <!--Icone do aplicativo-->
             <Image Source="ic_Logo.png" HeightRequest="200" WidthRequest="200"></Image>
-<<<<<<< HEAD
+
             <!--BOtão com a Info do App e link externo-->
             <Button x:Name="InfoApp" Text="FRASES S2 3.0.21 " Clicked="InfoApp_Clicked"></Button>
             <!--Botão com link para telegram-->
@@ -29,7 +29,7 @@
             <Button x:Name="Copiar_Pix" Text="Copiar Chave PIX" Clicked="Copiar_Pix_Clicked"></Button>
             <!--Botão doação via Pic Pay-->
             <Button x:Name="PicPay" Text=" Doar com PicPay" Clicked="PicPay_Clicked"></Button>
-=======
+
             <Label Margin="5,10,5,10" FontSize="15"
                    Text="Frases S2" BackgroundColor="Black"
                    HorizontalTextAlignment="Center" />
@@ -38,7 +38,7 @@
                    HorizontalTextAlignment="Center" />
             <Button x:Name="Instagram" Text="Instagram" Clicked="Instagram_Clicked"></Button>
             <Button x:Name="Telegram" Text="Comunidade Frases S2" Clicked="Telegram_Clicked"></Button>
->>>>>>> 97fb301620002e844ed5ac06ff8040e83e146d8e
+
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
