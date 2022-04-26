@@ -72,7 +72,7 @@
                     HeightRequest="50" CornerRadius="25"                   
                     Padding="20,0">
             <pancake:PancakeView.GestureRecognizers>
-                <TapGestureRecognizer  />
+                <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_1"  />
             </pancake:PancakeView.GestureRecognizers>
                 <Label TextColor="Black" FontSize="12"
                        HorizontalTextAlignment="Center"
@@ -80,8 +80,8 @@
                        VerticalOptions="Center">
                 <Label.FormattedText>
                     <FormattedString>
-                        <Span FontAttributes="Bold" Text="💰 FAÇA UMA DOAÇÃO 💰 &#10;"/>
-                        <Span Text="Ajude a Manter o App Sem Anúncios!"/>
+                        <Span FontAttributes="Bold" Text="💬 NOSSA COMUNIDADE 💬 &#10;"/>
+                        <Span Text="Participe/Ajude Nossa Comunidade"/>
                     </FormattedString>
                 </Label.FormattedText>
             </Label>

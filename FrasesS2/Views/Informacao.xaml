@@ -10,8 +10,8 @@
             <Image Source="ic_Logo.png" HeightRequest="200" WidthRequest="200"></Image>
             <!--BOtão com a Info do App e link externo-->
             <Button x:Name="InfoApp" Text="FRASES S2 " Clicked="InfoApp_Clicked"></Button>
-            <!--Botão com link para telegram-->
-            <!-- <Button x:Name="Telegram" BackgroundColor="#247773" Text="Telegram" Clicked="Telegram_Clicked"></Button>-->
+            <!--Botão com link para Instagram-->
+            <Button x:Name="SeguirInstagram" Text="SIGA NOSSO INSTAGRAM" Clicked="SeguirInstagram_Clicked"></Button>
             <!--Texto para seção doaçaoes-->
             <Label TextColor="Black" FontSize="13"
                        HorizontalTextAlignment="Center"
@@ -28,16 +28,6 @@
             <Button x:Name="Copiar_Pix" Text="Copiar Chave PIX" Clicked="Copiar_Pix_Clicked"></Button>
             <!--Botão doação via Pic Pay-->
             <Button x:Name="PicPay" Text=" Doar com PicPay" Clicked="PicPay_Clicked"></Button>
-
-            <Label Margin="5,10,5,10" FontSize="15"
-                   Text="Frases S2" BackgroundColor="Black"
-                   HorizontalTextAlignment="Center" />
-            <Label Margin="5,10,5,10" FontSize="15" BackgroundColor="Black"
-                   Text="Siga nosso app através dos meios de comunicação abaixo:"
-                   HorizontalTextAlignment="Center" />
-            <Button x:Name="Instagram" Text="Instagram" Clicked="Instagram_Clicked"></Button>
-            <Button x:Name="Telegram" Text="Comunidade Frases S2" Clicked="Telegram_Clicked"></Button>
-
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

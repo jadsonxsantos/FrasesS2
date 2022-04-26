@@ -1,17 +1,37 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="FrasesS2.Views.EnviarFrase">
-    
+             x:Class="FrasesS2.Views.EnviarFrase" Title="Adicionar">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Seguir"
+                 Order="Primary" Clicked="ToolbarItem_Clicked"
+                 Priority="0" />
+    </ContentPage.ToolbarItems>
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Envie sua frase, vamos adicionar ao app em até 3 dias úteis após a aprovação!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-            <Entry Text="Qual seu Nome?"></Entry>
-            <Entry Text="Autor da Frase"></Entry>
-            <Editor Text="Digite a Frase"></Editor>
-            <Button Text="Enviar..."></Button>
+            <Label TextColor="Black" FontSize="13"
+                   HorizontalTextAlignment="Start"
+                   Margin="5,5,5,5"
+                   VerticalOptions="Center">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span FontAttributes="Bold" Text="Use esse espaço para enviar uma frase, uma declaração ou um depoimento, seja livre e criativo. Os depoimentos serão adicionados ao app em até 48h. &#10;"/>
+                        <Span FontAttributes="Italic" Text="Quer agilizar a exibição do seu depoimento? &#10;"/>
+                        <Span Text="1 - Siga nosso perfil no instagram: @jadsonxsantos &#10;"/>
+                        <Span Text="2 - Envie uma DM, solicitando a verificação do depoimento. &#10;"/>
+                        <Span Text="3 - Pronto. &#10;"/>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+            <Label Text="Nome ou @ do instagram:"
+                   TextColor="Black"
+                   HorizontalTextAlignment="Start" />
+            <Entry x:Name="txtNome" PlaceholderColor="Black" TextColor="Black" Placeholder="Ex: @jadsonxsantos"></Entry>
+            <Label Text="Frase, Depoimento, Declaração etc:"
+                   TextColor="Black"
+                   HorizontalTextAlignment="Start" />
+            <Editor x:Name="txtDescricao" TextColor="Black" HeightRequest="100" Keyboard="Chat" Placeholder=""></Editor>
+            <Button Text="Enviar" Clicked="Button_Clicked"></Button>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

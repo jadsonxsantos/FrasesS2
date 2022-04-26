@@ -128,10 +128,9 @@ namespace FrasesS2.Views
             }
 
         }        
-
-        private async void TapGestureRecognizer_Tapped(object sender, EventArgs e)
+        private async void TapGestureRecognizer_Tapped_1(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new Views.Doacao());
+            await Browser.OpenAsync("https://chat.whatsapp.com/CIpiAtei5h27auOA672J6V", BrowserLaunchMode.SystemPreferred);
         }
 
         private async void retroceder()

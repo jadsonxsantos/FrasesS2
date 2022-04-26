@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FrasesS2.Views.Admin" Title="Painel Administrativo">
+    <!--BIBLIOTECA DE CORES-->
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Color x:Key="CorStatusBar">#6eaa5e</Color>
+            <Color x:Key="CorBotoes">#15400e</Color>
+            <Color x:Key="CorTitulo">#000000</Color>
+            <Color x:Key="CorDescricao">#404040</Color>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+  
+    <ContentPage.Content>
+
+        <RefreshView x:Name="RefreshControl">
+            <StackLayout>
+                <ListView x:Name="LstPersons" SeparatorVisibility="None"      
+                  BackgroundColor="White" HasUnevenRows="true" ItemTapped="LstPersons_ItemTapped"               
+                  VerticalOptions="FillAndExpand" CachingStrategy="RecycleElement"                   
+                  Margin="0,5,0,5" IsPullToRefreshEnabled="True">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <SwipeView>
+                                    <SwipeView.LeftItems>
+                                        <SwipeItems x:Name="swipe_Aprovar" Mode="Reveal">
+                                            <SwipeItem x:Name="Swipe_Aprovar" Text="Aprovar"
+                                                   IconImageSource="ic_Copiar.png"
+                                                   BackgroundColor="Transparent"
+                                                   Invoked="Swipe_Aprovar_Invoked" />
+                                        </SwipeItems>
+                                    </SwipeView.LeftItems>
+                                    <!--<SwipeView.RightItems>
+                                        <SwipeItems x:Name="swipeDireita" Mode="Reveal">
+                                            <SwipeItem x:Name="Swipe_OpenLinkExterno" Text="Abrir"
+                                                   BackgroundColor="Transparent"
+                                                   IconImageSource="ic_Site.png"
+                                                   Invoked="Swipe_OpenLinkExterno_Invoked" />
+                                        </SwipeItems>-->
+                                    <!--</SwipeView.RightItems>-->
+                                    <!-- Conteúdo -->
+                                <StackLayout Margin="5,5,5,5" WidthRequest="300" HeightRequest="100">
+                                    <Frame  OutlineColor="{StaticResource CorBotoes}"  HasShadow="true" Margin="1,1,1,1" CornerRadius="15" >
+                                        <StackLayout  Margin="-10,-10,-10,-10" Orientation="Horizontal">
+                                            <Grid  VerticalOptions="FillAndExpand"  Margin="-5,5,0,0" HorizontalOptions="FillAndExpand">
+                                                <Grid.RowDefinitions>
+                                                    <RowDefinition Height="70"/>
+                                                </Grid.RowDefinitions>
+
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition Width="*"></ColumnDefinition>
+                                                </Grid.ColumnDefinitions>
+
+                                                <Label x:Name="txtNome" FontAttributes="Bold"  Margin="0,-5"
+                                                       Text="{Binding Nome}" HorizontalTextAlignment="Center"
+                                                       TextColor="{StaticResource CorTitulo}"/>
+
+                                                <StackLayout Margin="5,5,5,5" Orientation="Horizontal" >
+                                                    <Label x:Name="txtDescricao" Text="{Binding Descricao}" 
+                                                           VerticalTextAlignment="Center" FontSize="Small" 
+                                                           TextColor="{StaticResource CorDescricao}" Margin="0,10" />
+                                                </StackLayout>
+                                            </Grid>
+                                        </StackLayout>
+                                    </Frame>
+                                </StackLayout>
+                                <!--</SwipeView>-->
+                                </SwipeView>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackLayout>
+        </RefreshView>
+    </ContentPage.Content>
+</ContentPage>

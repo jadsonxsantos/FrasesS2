@@ -62,42 +62,12 @@
         </ResourceDictionary>
     </Shell.Resources>
 
-    <!--<Shell.FlyoutHeaderTemplate>
-        <DataTemplate>
-            <StackLayout Margin="0,5,0,5" BackgroundColor="{StaticResource Primary}">
-                <Image Source="S2SemFundo.png" WidthRequest="100" HeightRequest="100"></Image>
-                <Label Text="Versão 3.0.19" TextColor="White" HorizontalTextAlignment="Center"></Label>
-            </StackLayout>
-        </DataTemplate>
-    </Shell.FlyoutHeaderTemplate>
-
-    <FlyoutItem Title="Home" Icon="ic_home.png">
-        <ShellContent Route="Icon_AboutPage" ContentTemplate="{DataTemplate local:Categoria}" />
-    </FlyoutItem>
-
-    <FlyoutItem Title="Favoritos" IsEnabled="False" IsVisible="False" Icon="ic_Favorito.png">
-        <ShellContent Route="AboutPage" ContentTemplate="{DataTemplate local:Categoria}" />
-    </FlyoutItem>
-
-    <FlyoutItem Title="Enviar frase" IsEnabled="False" IsVisible="False" Icon="ic_EnviarFrase.png">
-        <ShellContent Route="AboutPage" ContentTemplate="{DataTemplate local:EnviarFrase}" />
-    </FlyoutItem>
-
-    <FlyoutItem Title="Doação" Icon="ic_Doacao.png">
-        <ShellContent Route="AboutPage" ContentTemplate="{DataTemplate local:Doacao}" />
-    </FlyoutItem>
-
-    <FlyoutItem Title="Informações" Icon="ic_Informacoes.png">
-        <ShellContent Route="AboutPage" ContentTemplate="{DataTemplate local:Informacao}" />
-    </FlyoutItem>
-
-    <FlyoutItem Title="Configurações" IsEnabled="False" IsVisible="False" Icon="ic_Configuracoes.png">
-        <ShellContent Route="AboutPage" ContentTemplate="{DataTemplate local:Doacao}" />
-    </FlyoutItem>-->
-
-    <!--TABBAR INFERIOR -->
+    <!-- TABBAR INFERIOR -->
     <TabBar>
-        <ShellContent Route="frases" Title="FRASES" Icon="icon_Frases.png" ContentTemplate="{DataTemplate local:Categoria}" />
-        <ShellContent Route="sobre" Title="SOBRE" Icon="Icon_Sobre.png" ContentTemplate="{DataTemplate local:Informacao}" />
+        <ShellContent Route="frases" Title="FRASES" Icon="icon_Frases.png" ContentTemplate="{DataTemplate local:Categoria}"/>
+        <ShellContent Title="MURAL" Icon="ic_Mural.png" ContentTemplate="{DataTemplate local:Mural}" />
+        <!--<ShellContent Title="add" Icon="Icon_Sobre.png" ContentTemplate="{DataTemplate local:EnviarFrase}" />-->
+        <ShellContent Route="sobre" Title="SOBRE" Icon="Icon_Sobre.png" ContentTemplate="{DataTemplate local:Informacao}"/>
     </TabBar>
+
 </Shell>
