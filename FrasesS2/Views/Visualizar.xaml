@@ -2,6 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:pancake="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+             xmlns:Models="clr-namespace:FrasesS2.Models"
              x:Class="FrasesS2.Views.Visualizar" BackgroundColor="White">
 
     <StackLayout>
@@ -86,11 +87,11 @@
                 </Label.FormattedText>
             </Label>
         </pancake:PancakeView>
-        <!--<controls:AdMobView x:Name="adMobView"
+        <Models:AdMobView x:Name="adMobView"
                             WidthRequest="320" 
                             HeightRequest="50" 
                             BackgroundColor="Transparent" 
-                            VerticalOptions="EndAndExpand"/>-->
+                            VerticalOptions="EndAndExpand"/>
 
     </StackLayout>
 </ContentPage>

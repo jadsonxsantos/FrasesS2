@@ -18,6 +18,8 @@ namespace FrasesS2.Views
         public Visualizar(CategoriaFrase cf)
         {
             InitializeComponent();
+            adMobView.AdUnitId = "ca-app-pub-3659475632008000/3135147345";
+            
             Shell.SetTabBarIsVisible(this, false); // ocultando a TabBar
             cfdata = new CategoriaFrase();
             cfdata = cf;
