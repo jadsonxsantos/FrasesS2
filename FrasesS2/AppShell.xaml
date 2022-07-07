@@ -65,7 +65,7 @@
     <!-- TABBAR INFERIOR -->
     <TabBar>
         <ShellContent Route="frases" Title="FRASES" Icon="icon_Frases.png" ContentTemplate="{DataTemplate local:Categoria}"/>
-        <ShellContent Title="MURAL" Icon="ic_Mural.png" ContentTemplate="{DataTemplate local:Mural}" />
+        <!--<ShellContent Title="MURAL" Icon="ic_Mural.png" ContentTemplate="{DataTemplate local:Mural}" />-->
         <!--<ShellContent Title="add" Icon="Icon_Sobre.png" ContentTemplate="{DataTemplate local:EnviarFrase}" />-->
         <ShellContent Route="sobre" Title="SOBRE" Icon="Icon_Sobre.png" ContentTemplate="{DataTemplate local:Informacao}"/>
     </TabBar>

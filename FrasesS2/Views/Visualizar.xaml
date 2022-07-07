@@ -82,7 +82,7 @@
                 <Label.FormattedText>
                     <FormattedString>
                         <Span FontAttributes="Bold" Text="💬 NOSSA COMUNIDADE 💬 &#10;"/>
-                        <Span Text="Participe/Ajude Nossa Comunidade"/>
+                        <Span Text="Comunidade no Whatsapp"/>
                     </FormattedString>
                 </Label.FormattedText>
             </Label>
