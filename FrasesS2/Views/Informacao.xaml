@@ -19,7 +19,7 @@
             <!--BOtão com a Info do App e link externo-->
             <Button x:Name="InfoApp" Text="FRASES S2 " Clicked="InfoApp_Clicked"></Button>
             <!--Botão com link para Instagram-->
-            <Button x:Name="avaliarAPP" Text="AVALIE NOSSO APP" Clicked="avaliarAPP_Clicked"></Button>
+            <Button x:Name="avaliarAPP" Text="AVALIE NOSSO APP" Clicked="AvaliarAPP_Clicked"></Button>
             <!--Texto para seção doaçaoes-->
             <Label TextColor="Black" FontSize="13"
                        HorizontalTextAlignment="Center"

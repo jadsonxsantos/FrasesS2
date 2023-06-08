@@ -14,8 +14,8 @@ namespace FrasesS2.Views
     public partial class Informacao : ContentPage
     {
         readonly FirebaseCRUD Fb_Crud = new FirebaseCRUD();
-        UserMural itemPix = new UserMural();
-        string currentVersion = VersionTracking.CurrentVersion;
+
+        readonly string currentVersion = VersionTracking.CurrentVersion;
         int lblValue = 0;
         public Informacao()
         {
@@ -72,7 +72,7 @@ namespace FrasesS2.Views
             await Browser.OpenAsync("https://www.instagram.com/jadsonxsantos/", BrowserLaunchMode.SystemPreferred);
         }
 
-        private async void avaliarAPP_Clicked(object sender, EventArgs e)
+        private async void AvaliarAPP_Clicked(object sender, EventArgs e)
         {
             await CrossStoreReview.Current.RequestReview(false);
             //CrossStoreReview.Current.OpenStoreListing("com.companyname.FrasesS2");
