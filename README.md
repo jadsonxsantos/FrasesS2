@@ -1,4 +1,4 @@
-Aplicativo de Frases para Windows Phone 8.1
+Aplicativo de Frases para Android e Windows Phone
 Desenvolvido por [Jadson Santos](https://www.instagram.com/jadsonxsantos)
 
 ### FRASES S2 PARA ANDROID
