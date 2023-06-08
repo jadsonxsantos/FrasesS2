@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:pancake="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+             x:Class="FrasesS2.Views.Informacao" BackgroundColor="White"
+             Title="SOBRE">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Color x:Key="CorStatusBar">#6eaa5e</Color>
+            <Color x:Key="CorBotoes">#15400e</Color>
+            <Color x:Key="CorTitulo">#000000</Color>
+            <Color x:Key="CorDescricao">#404040</Color>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <StackLayout>
+            <!--Icone do aplicativo-->
+            <Image Source="ic_Logo.png" HeightRequest="200" WidthRequest="200"></Image>
+            <!--BOtão com a Info do App e link externo-->
+            <Button x:Name="InfoApp" Text="FRASES S2 " Clicked="InfoApp_Clicked"></Button>
+            <!--Botão com link para Instagram-->
+            <Button x:Name="avaliarAPP" Text="AVALIE NOSSO APP" Clicked="avaliarAPP_Clicked"></Button>
+            <!--Texto para seção doaçaoes-->
+            <Label TextColor="Black" FontSize="13"
+                       HorizontalTextAlignment="Center"
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span FontAttributes="Bold" Text="🔔 ATUALIZAÇÕES E AVISOS 🔔 &#10;"/>
+                        <Span Text=""/>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+            <!--Botão doação via PIX-->
+
+            <ListView x:Name="LstPersons" SeparatorVisibility="None"      
+                  BackgroundColor="White" HasUnevenRows="true"              
+                  VerticalOptions="FillAndExpand" CachingStrategy="RecycleElement"                   
+                  Margin="0,5,0,5" IsPullToRefreshEnabled="True">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <!-- Conteúdo -->
+                            <StackLayout Margin="5,5,5,5" WidthRequest="300" HeightRequest="100">
+                                <Frame HasShadow="true" Margin="1,1,1,1" CornerRadius="15" >
+                                    <StackLayout  Margin="-10,-10,-10,-10" Orientation="Horizontal">
+                                        <Grid  VerticalOptions="FillAndExpand"  Margin="-5,5,0,0" HorizontalOptions="FillAndExpand">
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="70"/>
+                                               
+                                            </Grid.RowDefinitions>
+
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="*"></ColumnDefinition>
+                                            </Grid.ColumnDefinitions>
+
+                                            <Label x:Name="txtNome" FontAttributes="Bold"  Margin="0,-5"
+                                                       Text="{Binding Nome}" HorizontalTextAlignment="Center"
+                                                       TextColor="{StaticResource CorTitulo}"/>
+
+                                            <StackLayout Margin="5,5,5,5" Orientation="Horizontal" >
+                                                <Label x:Name="txtDescricao" Text="{Binding Descricao}" 
+                                                           HorizontalTextAlignment="Center" FontSize="Small" 
+                                                           TextColor="{StaticResource CorDescricao}" Margin="0,10" />
+                                            </StackLayout>
+                                        </Grid>
+                                      
+                                    </StackLayout>
+                                </Frame>
+                            </StackLayout>
+                            <!--</SwipeView>-->
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+           
+                <Label x:Name="txtData" HorizontalTextAlignment="Center" 
+                       VerticalTextAlignment="Center" FontSize="8" VerticalOptions="CenterAndExpand"
+                       TextColor="{StaticResource CorDescricao}"/>
+          
+            <pancake:PancakeView VerticalOptions="EndAndExpand" BackgroundColor="#88e288"
+                    Margin="50,10,50,10" x:Name="Pc_Tapped"
+                    HorizontalOptions="FillAndExpand"
+                    HeightRequest="50" CornerRadius="25"                   
+                    Padding="20,0">
+                <pancake:PancakeView.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"  />
+                </pancake:PancakeView.GestureRecognizers>
+                <Label TextColor="Black" FontSize="12"
+                       HorizontalTextAlignment="Center"
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span FontAttributes="Bold" Text="💬 SIGA NOSSO INSTAGRAM 💬 &#10;"/>
+                            <Span Text="conheça nosso criador"/>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+            </pancake:PancakeView>
+
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

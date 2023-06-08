@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FrasesS2.Views.EnviarFrase" Title="Avisos">
+    <!--<ContentPage.ToolbarItems>
+        <ToolbarItem Text="Seguir"
+                 Order="Primary" Clicked="ToolbarItem_Clicked"
+                 Priority="0" />
+    </ContentPage.ToolbarItems>-->
+    <ContentPage.Content>
+        <StackLayout Margin="5,10,5,10">
+            <!--<Label TextColor="Black" FontSize="13"
+                   HorizontalTextAlignment="Start"
+                   Margin="5,5,5,5"
+                   VerticalOptions="Center">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span FontAttributes="Bold" Text="Use esse espaço para enviar uma frase, uma declaração ou um depoimento, seja livre e criativo. Os depoimentos serão adicionados ao app em até 48h. &#10;"/>
+                        <Span FontAttributes="Italic" Text="Quer agilizar a exibição do seu depoimento? &#10;"/>
+                        <Span Text="1 - Siga nosso perfil no instagram: @jadsonxsantos &#10;"/>
+                        <Span Text="2 - Envie uma DM, solicitando a verificação do depoimento. &#10;"/>
+                        <Span Text="3 - Pronto. &#10;"/>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>-->
+            <Label Text="Titulo:"
+                   TextColor="Black"
+                   HorizontalTextAlignment="Start" />
+            <Entry x:Name="txtNome" PlaceholderColor="Black" TextColor="Black" Placeholder="Titulo do aviso"/>
+            <Label Text="Descrição:"
+                   TextColor="Black"
+                   HorizontalTextAlignment="Start" />
+
+            <Editor x:Name="txtDescricao" TextColor="Black" HeightRequest="100" Keyboard="Chat" Placeholder=""/>
+
+            <StackLayout Orientation="Horizontal" Margin="5,5,5,10">
+
+                <Label Text="Disponivel?" TextColor="Black"/>
+
+                <Switch x:Name="styleSwitch" Toggled="Switch_Toggled"  
+                        OnColor="{StaticResource Primary}"
+                        ThumbColor="{StaticResource Primary}" />
+            </StackLayout>
+
+            <Button Text="Enviar" Clicked="Button_Clicked"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

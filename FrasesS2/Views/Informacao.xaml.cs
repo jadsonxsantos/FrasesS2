@@ -1,0 +1,81 @@
+﻿
+using FrasesS2.Models;
+using FrasesS2.Services;
+using Plugin.StoreReview;
+using System;
+using System.Linq;
+using Xamarin.Essentials;
+using Xamarin.Forms;
+using Xamarin.Forms.Xaml;
+
+namespace FrasesS2.Views
+{
+    [XamlCompilation(XamlCompilationOptions.Compile)]
+    public partial class Informacao : ContentPage
+    {
+        readonly FirebaseCRUD Fb_Crud = new FirebaseCRUD();
+        UserMural itemPix = new UserMural();
+        string currentVersion = VersionTracking.CurrentVersion;
+        int lblValue = 0;
+        public Informacao()
+        {
+            InitializeComponent();
+            InfoApp.Text = "FRASES S2 " + currentVersion;
+            FetchAllPersons();
+            //CrossStoreReview.Current.RequestReview(false);
+        }
+
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
+           
+            FetchAllPersons();
+        }
+
+        private async void FetchAllPersons()
+        {
+            var allPersons = await Fb_Crud.GetAllPersons();
+            
+            LstPersons.ItemsSource = allPersons.Where(x => x.Disponivel == true).OrderByDescending(d => d.Data);
+           
+
+        }
+
+        private async void InfoApp_Clicked(object sender, EventArgs e)
+        {
+            lblValue++;
+
+            if (lblValue >= 20)
+                await Navigation.PushAsync(new EnviarFrase());
+            else
+                lblValue++;
+
+                //CrossStoreReview.Current.OpenStoreListing("com.companyname.FrasesS2");
+                //await Navigation.PushAsync(new Admin());
+                //await Browser.OpenAsync("https://instagram.com/jadsonxsantos", BrowserLaunchMode.SystemPreferred);
+        }
+
+        private async void PicPay_Clicked(object sender, EventArgs e)
+        {
+            try
+            {
+                await Browser.OpenAsync("https://picpay.me/jadsonxsantos", BrowserLaunchMode.SystemPreferred);
+            }
+            catch (Exception)
+            {
+                // An unexpected error occured. No browser may be installed on the device.
+            }
+        }
+
+        private async void TapGestureRecognizer_Tapped(object sender, EventArgs e)
+        {
+            await Browser.OpenAsync("https://www.instagram.com/jadsonxsantos/", BrowserLaunchMode.SystemPreferred);
+        }
+
+        private async void avaliarAPP_Clicked(object sender, EventArgs e)
+        {
+            await CrossStoreReview.Current.RequestReview(false);
+            //CrossStoreReview.Current.OpenStoreListing("com.companyname.FrasesS2");
+        }
+    }
+}
