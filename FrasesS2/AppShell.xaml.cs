@@ -11,7 +11,7 @@ namespace FrasesS2
             InitializeComponent();
            
         }
-
+        //metodo 
         private async void OnMenuItemClicked(object sender, EventArgs e)
         {
           
