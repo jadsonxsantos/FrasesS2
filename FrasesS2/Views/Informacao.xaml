@@ -37,7 +37,7 @@
             <ListView x:Name="LstPersons" SeparatorVisibility="None"      
                   BackgroundColor="White" HasUnevenRows="true"  ItemTapped="LstPersons_ItemTapped"             
                   VerticalOptions="FillAndExpand" CachingStrategy="RecycleElement"                   
-                  Margin="0,5,0,5" IsPullToRefreshEnabled="True">
+                  Margin="0,5,0,5">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>

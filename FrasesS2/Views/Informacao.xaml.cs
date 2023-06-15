@@ -55,18 +55,6 @@ namespace FrasesS2.Views
                 //await Browser.OpenAsync("https://instagram.com/jadsonxsantos", BrowserLaunchMode.SystemPreferred);
         }
 
-        private async void PicPay_Clicked(object sender, EventArgs e)
-        {
-            try
-            {
-                await Browser.OpenAsync("https://picpay.me/jadsonxsantos", BrowserLaunchMode.SystemPreferred);
-            }
-            catch (Exception)
-            {
-                // An unexpected error occured. No browser may be installed on the device.
-            }
-        }
-
         private async void TapGestureRecognizer_Tapped(object sender, EventArgs e)
         {
             await Browser.OpenAsync("https://www.instagram.com/jadsonxsantos/", BrowserLaunchMode.SystemPreferred);
@@ -81,7 +69,6 @@ namespace FrasesS2.Views
         private void LstPersons_ItemTapped(object sender, ItemTappedEventArgs e)
         {
             LstPersons.SelectedItem = null;
-
         }
     }
 }
