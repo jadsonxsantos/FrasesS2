@@ -40,7 +40,7 @@ namespace FrasesS2.Views
 
         private void ExibirFrase(int index)
         {
-                adMobView.AdUnitId = "ca-app-pub-3659475632008000/3135147345";
+                //adMobView.AdUnitId = "ca-app-pub-3659475632008000/3135147345";
                 frase = cfdata.Frases[index].Frase;
                 autor = cfdata.Frases[index].Autor;
                 NomeCategoria = cfdata.Categoria;

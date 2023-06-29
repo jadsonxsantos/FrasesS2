@@ -57,13 +57,13 @@ namespace FrasesS2.Views
 
         private async void TapGestureRecognizer_Tapped(object sender, EventArgs e)
         {
-            await Browser.OpenAsync("https://www.instagram.com/jadsonxsantos/", BrowserLaunchMode.SystemPreferred);
+            await Browser.OpenAsync("https://www.instagram.com/jlds_projetos", BrowserLaunchMode.SystemPreferred);
         }
 
         private async void AvaliarAPP_Clicked(object sender, EventArgs e)
         {
-            await CrossStoreReview.Current.RequestReview(true);
-            //CrossStoreReview.Current.OpenStoreListing("com.companyname.FrasesS2");
+            await CrossStoreReview.Current.RequestReview(false);
+            CrossStoreReview.Current.OpenStoreListing("com.companyname.FrasesS2");
         }
 
         private void LstPersons_ItemTapped(object sender, ItemTappedEventArgs e)

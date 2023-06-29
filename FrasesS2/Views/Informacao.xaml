@@ -94,7 +94,7 @@
                     <Label.FormattedText>
                         <FormattedString>
                             <Span FontAttributes="Bold" Text="💬 SIGA NOSSO INSTAGRAM 💬 &#10;"/>
-                            <Span Text="conheça nosso criador"/>
+                            <Span Text="conheça nosso grupo"/>
                         </FormattedString>
                     </Label.FormattedText>
                 </Label>

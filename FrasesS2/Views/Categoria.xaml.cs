@@ -54,7 +54,7 @@ namespace FrasesS2.Views
         }
         private void CarregarCategoria()
         {
-            adMobView.AdUnitId = "ca-app-pub-3659475632008000/3135147345";
+            //adMobView.AdUnitId = "ca-app-pub-3659475632008000/3135147345";
             List<CategoriaFrase> Lt_Ctg_Android = new List<CategoriaFrase>();
             Lt_Ctg_Android.Add(new CategoriaFrase { TituloCateg = "Amizade", ImageCateg = "Inicio_amizade_bloco.jpg" });
             Lt_Ctg_Android.Add(new CategoriaFrase { TituloCateg = "Amor", ImageCateg = "Inicio_amor_bloco.jpg" });

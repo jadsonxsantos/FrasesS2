@@ -6,7 +6,7 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Android.OS;
-using Android.Gms.Ads;
+//using Android.Gms.Ads;
 
 namespace FrasesS2.Droid
 {
@@ -19,7 +19,7 @@ namespace FrasesS2.Droid
             ToolbarResource = Resource.Layout.Toolbar;
 
             base.OnCreate(savedInstanceState);
-            MobileAds.Initialize(ApplicationContext, "ca-app-pub-3659475632008000/3135147345");
+            //MobileAds.Initialize(ApplicationContext, "ca-app-pub-3659475632008000/3135147345");
 
           
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);

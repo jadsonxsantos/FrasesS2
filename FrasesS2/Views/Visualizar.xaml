@@ -67,13 +67,13 @@
                        HorizontalTextAlignment="Center"/>
         </StackLayout>
 
-        <StackLayout>
+        <!--<StackLayout>
             <Models:AdMobView x:Name="adMobView"
                           Margin="0,0,0,0"
                           WidthRequest="320" 
                           BackgroundColor="Transparent" 
                           VerticalOptions="EndAndExpand"/>
-        </StackLayout>
+        </StackLayout>-->
 
     </StackLayout>
 
