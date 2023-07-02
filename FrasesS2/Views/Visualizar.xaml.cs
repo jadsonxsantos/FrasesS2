@@ -80,8 +80,7 @@ namespace FrasesS2.Views
             catch (Exception)
             {
                 await DisplayAlert("Erro", "Algo de errado não esta certo!" + " ", "OK");
-            }
-            
+            }            
         }
 
         private async void IBtn_Copiar_Clicked(object sender, EventArgs e)
@@ -102,7 +101,7 @@ namespace FrasesS2.Views
 
         private async void IBtn_Corrigir_Clicked(object sender, EventArgs e)
         {
-            var resp = await DisplayAlert(Frase.Text, "Algum problema com a frase? ", "Ortografia", "Repetição");
+            var resp = await DisplayAlert("Algum problema com a frase?", Frase.Text, "Ortografia", "Repetição");
             if (resp)
             {
 
@@ -130,9 +129,17 @@ namespace FrasesS2.Views
                     emailMessagner.SendEmail(email);
                 }
             }
+        }
+        private async void Tap_Grupo_Tapped(object sender, EventArgs e)
+        {
+            await Browser.OpenAsync("https://www.instagram.com/jlds_projetos", BrowserLaunchMode.SystemPreferred);
+        }
 
-        }        
-       
+        private async void Tap_avaliar_Tapped(object sender, EventArgs e)
+        {
+            await CrossStoreReview.Current.RequestReview(false);
+            CrossStoreReview.Current.OpenStoreListing("com.companyname.FrasesS2");
+        }
 
         private async void Retroceder()
         {
@@ -156,7 +163,6 @@ namespace FrasesS2.Views
             }
           
         }
-
         private void ImagemDestaque()
         {
             // ao clicar na categoria, identifica o nome dela e exibirar uma mensagem correspondente a categoria

@@ -36,9 +36,7 @@ namespace FrasesS2.Views
         {
             var allPersons = await Fb_Crud.GetAllPersons();
             
-            LstPersons.ItemsSource = allPersons.Where(x => x.Disponivel == true).OrderByDescending(d => d.Data);
-           
-
+            LstPersons.ItemsSource = allPersons.Where(x => x.Disponivel == true).OrderByDescending(d => d.Data);      
         }
 
         private async void InfoApp_Clicked(object sender, EventArgs e)

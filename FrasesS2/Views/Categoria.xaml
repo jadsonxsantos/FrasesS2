@@ -3,14 +3,14 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:pancake="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
              xmlns:Models="clr-namespace:FrasesS2.Models"
-             x:Class="FrasesS2.Views.Categoria" BackgroundColor="White"
+             x:Class="FrasesS2.Views.Categoria"
              Title="Frases S2">
 
-    <StackLayout BackgroundColor="Transparent" VerticalOptions="FillAndExpand" HorizontalOptions="Fill">
+    <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="Fill">
         <StackLayout Orientation="Horizontal" BackgroundColor="Transparent" HorizontalOptions="Center" VerticalOptions="Center">
             <ContentView Padding="0,0,0,0" BackgroundColor="Transparent" VerticalOptions="FillAndExpand">
                 <StackLayout BackgroundColor="Transparent">
-                    <ListView x:Name="Lista_Categorias" RowHeight="100" ItemTapped="Lista_Categorias_ItemTapped" CachingStrategy="RecycleElement">
+                    <ListView x:Name="Lista_Categorias" BackgroundColor="White" RowHeight="100" ItemTapped="Lista_Categorias_ItemTapped" CachingStrategy="RecycleElement">
                         <ListView.ItemTemplate>
                             <DataTemplate>
                                 <ViewCell>
@@ -28,6 +28,7 @@
                 </StackLayout>
             </ContentView>
         </StackLayout>
+   
         <!--<StackLayout>
             <Models:AdMobView x:Name="adMobView"
                           Margin="0,0,0,0"

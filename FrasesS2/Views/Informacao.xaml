@@ -78,7 +78,7 @@
                 <Label x:Name="txtData" HorizontalTextAlignment="Center" 
                        VerticalTextAlignment="Center" FontSize="8" VerticalOptions="CenterAndExpand"
                        TextColor="{StaticResource CorDescricao}"/>
-          
+
             <pancake:PancakeView VerticalOptions="EndAndExpand" BackgroundColor="#88e288"
                     Margin="50,10,50,10" x:Name="Pc_Tapped"
                     HorizontalOptions="FillAndExpand"
@@ -93,14 +93,12 @@
                        VerticalOptions="Center">
                     <Label.FormattedText>
                         <FormattedString>
-                            <Span FontAttributes="Bold" Text="💬 SIGA NOSSO INSTAGRAM 💬 &#10;"/>
-                            <Span Text="conheça nosso grupo"/>
+                            <Span FontAttributes="Bold" Text="💬 OUTROS PROJETOS 💬 &#10;"/>
+                            <Span Text="Faça parte do nosso grupo"/>
                         </FormattedString>
                     </Label.FormattedText>
                 </Label>
             </pancake:PancakeView>
-
-
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

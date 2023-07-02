@@ -5,6 +5,11 @@
              xmlns:Models="clr-namespace:FrasesS2.Models"
              x:Class="FrasesS2.Views.Visualizar" BackgroundColor="White">
 
+   
+        <ContentPage.ToolbarItems>
+        <ToolbarItem IconImageSource="ic_feedback.png" Text="Reportar problema" Clicked="IBtn_Corrigir_Clicked" />
+        </ContentPage.ToolbarItems>
+   
     <StackLayout>
         <StackLayout>
             <Image x:Name="ImageCategoria" 
@@ -14,7 +19,7 @@
                    HorizontalOptions="Fill"                    
                    VerticalOptions="Fill"/>
 
-            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Margin="50,10,60,0" VerticalOptions="CenterAndExpand">
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="CenterAndExpand">
 
                 <ImageButton x:Name="IBtn_Voltar" Source="ic_back.png"  HeightRequest="50" WidthRequest="50"
                      Aspect="AspectFit" Clicked="VoltarClicked"
@@ -27,12 +32,7 @@
                      BorderWidth="5" BackgroundColor="{StaticResource Primary}"
                      VerticalOptions="CenterAndExpand" Clicked="IBtn_Copiar_Clicked"
                      HorizontalOptions="CenterAndExpand"/>
-
-                <ImageButton x:Name="IBtn_Corrigir" Source="ic_feedback.png" 
-                     Aspect="AspectFit" HeightRequest="50" WidthRequest="50"
-                     BorderWidth="5" BackgroundColor="{StaticResource Primary}"
-                     VerticalOptions="CenterAndExpand" Clicked="IBtn_Corrigir_Clicked"
-                     HorizontalOptions="CenterAndExpand"/>
+               
 
                 <ImageButton x:Name="IBtn_Compartilhar" Source="ic_share.png" 
                      Aspect="AspectFit" HeightRequest="50" WidthRequest="50"
@@ -67,6 +67,27 @@
                        HorizontalTextAlignment="Center"/>
         </StackLayout>
 
+        <pancake:PancakeView VerticalOptions="EndAndExpand" BackgroundColor="{StaticResource Primary}"
+                    Margin="50,10,50,10" x:Name="Pc_Tapped"
+                    HorizontalOptions="FillAndExpand"
+                    HeightRequest="50" CornerRadius="25"                   
+                    Padding="20,0">
+                <pancake:PancakeView.GestureRecognizers>
+                    <TapGestureRecognizer x:Name="Tap_avaliar" Tapped="Tap_avaliar_Tapped"  />
+                </pancake:PancakeView.GestureRecognizers>
+                <Label TextColor="White" FontSize="12"
+                       HorizontalTextAlignment="Center"
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span FontAttributes="Bold" Text="✨ AVALIE NOSSO APP NA LOJA ✨ &#10;"/>
+                            <Span Text="Ajude nosso app, avalie! 🤩"/>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+            </pancake:PancakeView>
+     
         <!--<StackLayout>
             <Models:AdMobView x:Name="adMobView"
                           Margin="0,0,0,0"
@@ -75,8 +96,5 @@
                           VerticalOptions="EndAndExpand"/>
         </StackLayout>-->
 
-    </StackLayout>
-
-   
-    
+    </StackLayout>   
 </ContentPage>

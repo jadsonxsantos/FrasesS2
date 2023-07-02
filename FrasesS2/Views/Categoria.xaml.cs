@@ -1,5 +1,6 @@
 ﻿using FrasesS2.Models;
 using Newtonsoft.Json;
+using Plugin.StoreReview;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,7 +21,7 @@ namespace FrasesS2.Views
         public Categoria()
         {
             InitializeComponent();
-           
+            // Carregando Metodo das categorias ao iniciar a tela.
             CarregarCategoria();
         }
 
@@ -31,10 +32,8 @@ namespace FrasesS2.Views
                 string rescontent = await _client.GetStringAsync(Url);
 
                 List<CategoriaFrase> categoriasFrase = JsonConvert.DeserializeObject<List<CategoriaFrase>>(rescontent);
-
                 // Selecionar o objeto no Json. 
                 CategoriaFrase categoriaFrase = categoriasFrase.FirstOrDefault(cf => cf.Categoria.Equals(categoria));
-
                 // Abre tela e envia os parâmetros.    
                 if (categoriaFrase != null)
                 {
@@ -49,7 +48,6 @@ namespace FrasesS2.Views
             catch (Exception)
             {
                 await DisplayAlert("Você esta sem internet!", "Em breve teremos frases em modo Offline, Aguarde!" + " ", "OK");
-
             }
         }
         private void CarregarCategoria()
@@ -83,7 +81,6 @@ namespace FrasesS2.Views
             Lt_Ctg_Android.Add(new CategoriaFrase { TituloCateg = "Tristeza", ImageCateg = "Inicio_tristeza_bloco.jpg" });
             Lista_Categorias.ItemsSource = Lt_Ctg_Android;
         }
-
         private void Lista_Categorias_ItemTapped(object sender, ItemTappedEventArgs e)
         {
             var lv = (ListView)sender;
@@ -92,7 +89,6 @@ namespace FrasesS2.Views
             {
                 return;
             }
-
 
             var item = (CategoriaFrase)e.Item;
             switch (item.TituloCateg.ToString())
@@ -198,11 +194,6 @@ namespace FrasesS2.Views
                     break;
             }
             lv.SelectedItem = null;
-        }
-
-        private void TapGestureRecognizer_Tapped(object sender, EventArgs e)
-        {
-
         }
     }
 }
