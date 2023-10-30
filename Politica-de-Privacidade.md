@@ -28,15 +28,15 @@ Nós não somos responsáveis pelas práticas empregadas por nenhum site ou serv
 
 > 6. COMO ENTRAR EM CONTATO CONOSCO
 
-Se tiver quaisquer dúvidas sobre esta Política de Privacidade ou sobre o Serviço, encontre em contato conosco através do email: jadson0102@live.com
+Se tiver quaisquer dúvidas sobre esta Política de Privacidade ou sobre o Serviço, encontre em contato conosco através do email: jadsonxsts@gmail.com
 
 > 7. ALTERAÇÕES EM NOSSA POLÍTICA DE PRIVACIDADE
 
 O Frases S2 pode modificar ou atualizar esta Política de Privacidade de tempos em tempos, portanto verifique-a periodicamente. Nós podemos fornecer a você formas adicionais de aviso sobre modificações ou atualizações conforme apropriado mediante as circunstâncias. A continuação do seu uso do Frases S2 ou do Serviço após qualquer modificação desta Política de Privacidade constituirá sua aceitação das modificações em questão.
 A data de efetivação desta Política de Privacidade é 17 de Abril de 2019.
 
-[LURASOFT](https://www.instagram.com/luraxsoft)
+[JL DIGITAL STUDIO](https://www.instagram.com/jlds_projetos/)
 
-[Twitter](https://twitter.com/jadsonx)
+[Site](www.jldigitalstudio.com.br)
 
 [Instagram](https://www.instagram.com/jadsonxsantos)
